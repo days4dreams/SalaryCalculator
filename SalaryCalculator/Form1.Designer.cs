@@ -32,26 +32,26 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelAnnualSalary = new System.Windows.Forms.Label();
             this.groupBoxUserDetails = new System.Windows.Forms.GroupBox();
-            this.labelAgeRange = new System.Windows.Forms.Label();
-            this.radioButtonAge1 = new System.Windows.Forms.RadioButton();
-            this.radioButtonAge2 = new System.Windows.Forms.RadioButton();
-            this.radioButtonAge3 = new System.Windows.Forms.RadioButton();
             this.buttonCalculate = new System.Windows.Forms.Button();
+            this.radioButtonAge3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonAge2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonAge1 = new System.Windows.Forms.RadioButton();
+            this.labelAgeRange = new System.Windows.Forms.Label();
             this.groupBoxOutput = new System.Windows.Forms.GroupBox();
-            this.textBoxYearlyGross = new System.Windows.Forms.TextBox();
-            this.textBoxMonthlyGross = new System.Windows.Forms.TextBox();
-            this.textBoxWeeklyGross = new System.Windows.Forms.TextBox();
-            this.textBoxDailyGross = new System.Windows.Forms.TextBox();
-            this.textBoxTax = new System.Windows.Forms.TextBox();
-            this.textBoxNI = new System.Windows.Forms.TextBox();
-            this.textBoxTakeHome = new System.Windows.Forms.TextBox();
-            this.labelYearlyGross = new System.Windows.Forms.Label();
-            this.labelMonthlyGross = new System.Windows.Forms.Label();
-            this.labelWeeklyGross = new System.Windows.Forms.Label();
-            this.labelDailyGross = new System.Windows.Forms.Label();
-            this.labelTax = new System.Windows.Forms.Label();
-            this.labelNI = new System.Windows.Forms.Label();
             this.labelTakeHome = new System.Windows.Forms.Label();
+            this.labelNI = new System.Windows.Forms.Label();
+            this.labelTax = new System.Windows.Forms.Label();
+            this.labelDailyGross = new System.Windows.Forms.Label();
+            this.labelWeeklyGross = new System.Windows.Forms.Label();
+            this.labelMonthlyGross = new System.Windows.Forms.Label();
+            this.labelYearlyGross = new System.Windows.Forms.Label();
+            this.textBoxTakeHome = new System.Windows.Forms.TextBox();
+            this.textBoxNI = new System.Windows.Forms.TextBox();
+            this.textBoxTax = new System.Windows.Forms.TextBox();
+            this.textBoxDailyGross = new System.Windows.Forms.TextBox();
+            this.textBoxWeeklyGross = new System.Windows.Forms.TextBox();
+            this.textBoxMonthlyGross = new System.Windows.Forms.TextBox();
+            this.textBoxYearlyGross = new System.Windows.Forms.TextBox();
             this.groupBoxUserDetails.SuspendLayout();
             this.groupBoxOutput.SuspendLayout();
             this.SuspendLayout();
@@ -102,15 +102,37 @@
             this.groupBoxUserDetails.Text = "Your Details";
             this.groupBoxUserDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // labelAgeRange
+            // buttonCalculate
             // 
-            this.labelAgeRange.AutoSize = true;
-            this.labelAgeRange.Location = new System.Drawing.Point(8, 59);
-            this.labelAgeRange.Name = "labelAgeRange";
-            this.labelAgeRange.Size = new System.Drawing.Size(64, 13);
-            this.labelAgeRange.TabIndex = 3;
-            this.labelAgeRange.Text = "Age Range:";
-            this.labelAgeRange.Click += new System.EventHandler(this.label1_Click_1);
+            this.buttonCalculate.Location = new System.Drawing.Point(86, 88);
+            this.buttonCalculate.Name = "buttonCalculate";
+            this.buttonCalculate.Size = new System.Drawing.Size(202, 23);
+            this.buttonCalculate.TabIndex = 7;
+            this.buttonCalculate.Text = "Calculate";
+            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            // 
+            // radioButtonAge3
+            // 
+            this.radioButtonAge3.AutoSize = true;
+            this.radioButtonAge3.Location = new System.Drawing.Point(230, 59);
+            this.radioButtonAge3.Name = "radioButtonAge3";
+            this.radioButtonAge3.Size = new System.Drawing.Size(63, 17);
+            this.radioButtonAge3.TabIndex = 6;
+            this.radioButtonAge3.TabStop = true;
+            this.radioButtonAge3.Text = "Over 65";
+            this.radioButtonAge3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAge2
+            // 
+            this.radioButtonAge2.AutoSize = true;
+            this.radioButtonAge2.Location = new System.Drawing.Point(163, 59);
+            this.radioButtonAge2.Name = "radioButtonAge2";
+            this.radioButtonAge2.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonAge2.TabIndex = 5;
+            this.radioButtonAge2.TabStop = true;
+            this.radioButtonAge2.Text = "18 - 65";
+            this.radioButtonAge2.UseVisualStyleBackColor = true;
             // 
             // radioButtonAge1
             // 
@@ -124,36 +146,15 @@
             this.radioButtonAge1.UseVisualStyleBackColor = true;
             this.radioButtonAge1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButtonAge2
+            // labelAgeRange
             // 
-            this.radioButtonAge2.AutoSize = true;
-            this.radioButtonAge2.Location = new System.Drawing.Point(163, 59);
-            this.radioButtonAge2.Name = "radioButtonAge2";
-            this.radioButtonAge2.Size = new System.Drawing.Size(58, 17);
-            this.radioButtonAge2.TabIndex = 5;
-            this.radioButtonAge2.TabStop = true;
-            this.radioButtonAge2.Text = "18 - 65";
-            this.radioButtonAge2.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAge3
-            // 
-            this.radioButtonAge3.AutoSize = true;
-            this.radioButtonAge3.Location = new System.Drawing.Point(230, 59);
-            this.radioButtonAge3.Name = "radioButtonAge3";
-            this.radioButtonAge3.Size = new System.Drawing.Size(63, 17);
-            this.radioButtonAge3.TabIndex = 6;
-            this.radioButtonAge3.TabStop = true;
-            this.radioButtonAge3.Text = "Over 65";
-            this.radioButtonAge3.UseVisualStyleBackColor = true;
-            // 
-            // buttonCalculate
-            // 
-            this.buttonCalculate.Location = new System.Drawing.Point(86, 88);
-            this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(202, 23);
-            this.buttonCalculate.TabIndex = 7;
-            this.buttonCalculate.Text = "Calculate";
-            this.buttonCalculate.UseVisualStyleBackColor = true;
+            this.labelAgeRange.AutoSize = true;
+            this.labelAgeRange.Location = new System.Drawing.Point(8, 59);
+            this.labelAgeRange.Name = "labelAgeRange";
+            this.labelAgeRange.Size = new System.Drawing.Size(64, 13);
+            this.labelAgeRange.TabIndex = 3;
+            this.labelAgeRange.Text = "Age Range:";
+            this.labelAgeRange.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // groupBoxOutput
             // 
@@ -178,91 +179,23 @@
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Your Salary";
             // 
-            // textBoxYearlyGross
+            // labelTakeHome
             // 
-            this.textBoxYearlyGross.Location = new System.Drawing.Point(129, 27);
-            this.textBoxYearlyGross.Name = "textBoxYearlyGross";
-            this.textBoxYearlyGross.Size = new System.Drawing.Size(159, 20);
-            this.textBoxYearlyGross.TabIndex = 0;
+            this.labelTakeHome.AutoSize = true;
+            this.labelTakeHome.Location = new System.Drawing.Point(9, 198);
+            this.labelTakeHome.Name = "labelTakeHome";
+            this.labelTakeHome.Size = new System.Drawing.Size(102, 13);
+            this.labelTakeHome.TabIndex = 13;
+            this.labelTakeHome.Text = "Annual Take Home:";
             // 
-            // textBoxMonthlyGross
+            // labelNI
             // 
-            this.textBoxMonthlyGross.Location = new System.Drawing.Point(129, 53);
-            this.textBoxMonthlyGross.Name = "textBoxMonthlyGross";
-            this.textBoxMonthlyGross.Size = new System.Drawing.Size(159, 20);
-            this.textBoxMonthlyGross.TabIndex = 1;
-            // 
-            // textBoxWeeklyGross
-            // 
-            this.textBoxWeeklyGross.Location = new System.Drawing.Point(129, 79);
-            this.textBoxWeeklyGross.Name = "textBoxWeeklyGross";
-            this.textBoxWeeklyGross.Size = new System.Drawing.Size(159, 20);
-            this.textBoxWeeklyGross.TabIndex = 2;
-            // 
-            // textBoxDailyGross
-            // 
-            this.textBoxDailyGross.Location = new System.Drawing.Point(129, 105);
-            this.textBoxDailyGross.Name = "textBoxDailyGross";
-            this.textBoxDailyGross.Size = new System.Drawing.Size(159, 20);
-            this.textBoxDailyGross.TabIndex = 3;
-            // 
-            // textBoxTax
-            // 
-            this.textBoxTax.Location = new System.Drawing.Point(129, 143);
-            this.textBoxTax.Name = "textBoxTax";
-            this.textBoxTax.Size = new System.Drawing.Size(159, 20);
-            this.textBoxTax.TabIndex = 4;
-            // 
-            // textBoxNI
-            // 
-            this.textBoxNI.Location = new System.Drawing.Point(129, 169);
-            this.textBoxNI.Name = "textBoxNI";
-            this.textBoxNI.Size = new System.Drawing.Size(159, 20);
-            this.textBoxNI.TabIndex = 5;
-            // 
-            // textBoxTakeHome
-            // 
-            this.textBoxTakeHome.Location = new System.Drawing.Point(129, 195);
-            this.textBoxTakeHome.Name = "textBoxTakeHome";
-            this.textBoxTakeHome.Size = new System.Drawing.Size(159, 20);
-            this.textBoxTakeHome.TabIndex = 6;
-            // 
-            // labelYearlyGross
-            // 
-            this.labelYearlyGross.AutoSize = true;
-            this.labelYearlyGross.Location = new System.Drawing.Point(8, 30);
-            this.labelYearlyGross.Name = "labelYearlyGross";
-            this.labelYearlyGross.Size = new System.Drawing.Size(69, 13);
-            this.labelYearlyGross.TabIndex = 7;
-            this.labelYearlyGross.Text = "Yearly Gross:";
-            this.labelYearlyGross.Click += new System.EventHandler(this.labelYearlyGross_Click);
-            // 
-            // labelMonthlyGross
-            // 
-            this.labelMonthlyGross.AutoSize = true;
-            this.labelMonthlyGross.Location = new System.Drawing.Point(8, 56);
-            this.labelMonthlyGross.Name = "labelMonthlyGross";
-            this.labelMonthlyGross.Size = new System.Drawing.Size(77, 13);
-            this.labelMonthlyGross.TabIndex = 8;
-            this.labelMonthlyGross.Text = "Monthly Gross:";
-            // 
-            // labelWeeklyGross
-            // 
-            this.labelWeeklyGross.AutoSize = true;
-            this.labelWeeklyGross.Location = new System.Drawing.Point(8, 82);
-            this.labelWeeklyGross.Name = "labelWeeklyGross";
-            this.labelWeeklyGross.Size = new System.Drawing.Size(76, 13);
-            this.labelWeeklyGross.TabIndex = 9;
-            this.labelWeeklyGross.Text = "Weekly Gross:";
-            // 
-            // labelDailyGross
-            // 
-            this.labelDailyGross.AutoSize = true;
-            this.labelDailyGross.Location = new System.Drawing.Point(8, 108);
-            this.labelDailyGross.Name = "labelDailyGross";
-            this.labelDailyGross.Size = new System.Drawing.Size(63, 13);
-            this.labelDailyGross.TabIndex = 10;
-            this.labelDailyGross.Text = "Daily Gross:";
+            this.labelNI.AutoSize = true;
+            this.labelNI.Location = new System.Drawing.Point(9, 172);
+            this.labelNI.Name = "labelNI";
+            this.labelNI.Size = new System.Drawing.Size(81, 13);
+            this.labelNI.TabIndex = 12;
+            this.labelNI.Text = "Annual NI Paid:";
             // 
             // labelTax
             // 
@@ -274,23 +207,92 @@
             this.labelTax.Text = "Annual Tax Paid:";
             this.labelTax.Click += new System.EventHandler(this.label2_Click);
             // 
-            // labelNI
+            // labelDailyGross
             // 
-            this.labelNI.AutoSize = true;
-            this.labelNI.Location = new System.Drawing.Point(9, 172);
-            this.labelNI.Name = "labelNI";
-            this.labelNI.Size = new System.Drawing.Size(81, 13);
-            this.labelNI.TabIndex = 12;
-            this.labelNI.Text = "Annual NI Paid:";
+            this.labelDailyGross.AutoSize = true;
+            this.labelDailyGross.Location = new System.Drawing.Point(8, 108);
+            this.labelDailyGross.Name = "labelDailyGross";
+            this.labelDailyGross.Size = new System.Drawing.Size(63, 13);
+            this.labelDailyGross.TabIndex = 10;
+            this.labelDailyGross.Text = "Daily Gross:";
             // 
-            // labelTakeHome
+            // labelWeeklyGross
             // 
-            this.labelTakeHome.AutoSize = true;
-            this.labelTakeHome.Location = new System.Drawing.Point(9, 198);
-            this.labelTakeHome.Name = "labelTakeHome";
-            this.labelTakeHome.Size = new System.Drawing.Size(102, 13);
-            this.labelTakeHome.TabIndex = 13;
-            this.labelTakeHome.Text = "Annual Take Home:";
+            this.labelWeeklyGross.AutoSize = true;
+            this.labelWeeklyGross.Location = new System.Drawing.Point(8, 82);
+            this.labelWeeklyGross.Name = "labelWeeklyGross";
+            this.labelWeeklyGross.Size = new System.Drawing.Size(76, 13);
+            this.labelWeeklyGross.TabIndex = 9;
+            this.labelWeeklyGross.Text = "Weekly Gross:";
+            // 
+            // labelMonthlyGross
+            // 
+            this.labelMonthlyGross.AutoSize = true;
+            this.labelMonthlyGross.Location = new System.Drawing.Point(8, 56);
+            this.labelMonthlyGross.Name = "labelMonthlyGross";
+            this.labelMonthlyGross.Size = new System.Drawing.Size(77, 13);
+            this.labelMonthlyGross.TabIndex = 8;
+            this.labelMonthlyGross.Text = "Monthly Gross:";
+            // 
+            // labelYearlyGross
+            // 
+            this.labelYearlyGross.AutoSize = true;
+            this.labelYearlyGross.Location = new System.Drawing.Point(8, 30);
+            this.labelYearlyGross.Name = "labelYearlyGross";
+            this.labelYearlyGross.Size = new System.Drawing.Size(69, 13);
+            this.labelYearlyGross.TabIndex = 7;
+            this.labelYearlyGross.Text = "Yearly Gross:";
+            this.labelYearlyGross.Click += new System.EventHandler(this.labelYearlyGross_Click);
+            // 
+            // textBoxTakeHome
+            // 
+            this.textBoxTakeHome.Location = new System.Drawing.Point(129, 195);
+            this.textBoxTakeHome.Name = "textBoxTakeHome";
+            this.textBoxTakeHome.Size = new System.Drawing.Size(159, 20);
+            this.textBoxTakeHome.TabIndex = 6;
+            // 
+            // textBoxNI
+            // 
+            this.textBoxNI.Location = new System.Drawing.Point(129, 169);
+            this.textBoxNI.Name = "textBoxNI";
+            this.textBoxNI.Size = new System.Drawing.Size(159, 20);
+            this.textBoxNI.TabIndex = 5;
+            // 
+            // textBoxTax
+            // 
+            this.textBoxTax.Location = new System.Drawing.Point(129, 143);
+            this.textBoxTax.Name = "textBoxTax";
+            this.textBoxTax.Size = new System.Drawing.Size(159, 20);
+            this.textBoxTax.TabIndex = 4;
+            this.textBoxTax.TextChanged += new System.EventHandler(this.textBoxTax_TextChanged);
+            // 
+            // textBoxDailyGross
+            // 
+            this.textBoxDailyGross.Location = new System.Drawing.Point(129, 105);
+            this.textBoxDailyGross.Name = "textBoxDailyGross";
+            this.textBoxDailyGross.Size = new System.Drawing.Size(159, 20);
+            this.textBoxDailyGross.TabIndex = 3;
+            // 
+            // textBoxWeeklyGross
+            // 
+            this.textBoxWeeklyGross.Location = new System.Drawing.Point(129, 79);
+            this.textBoxWeeklyGross.Name = "textBoxWeeklyGross";
+            this.textBoxWeeklyGross.Size = new System.Drawing.Size(159, 20);
+            this.textBoxWeeklyGross.TabIndex = 2;
+            // 
+            // textBoxMonthlyGross
+            // 
+            this.textBoxMonthlyGross.Location = new System.Drawing.Point(129, 53);
+            this.textBoxMonthlyGross.Name = "textBoxMonthlyGross";
+            this.textBoxMonthlyGross.Size = new System.Drawing.Size(159, 20);
+            this.textBoxMonthlyGross.TabIndex = 1;
+            // 
+            // textBoxYearlyGross
+            // 
+            this.textBoxYearlyGross.Location = new System.Drawing.Point(129, 27);
+            this.textBoxYearlyGross.Name = "textBoxYearlyGross";
+            this.textBoxYearlyGross.Size = new System.Drawing.Size(159, 20);
+            this.textBoxYearlyGross.TabIndex = 0;
             // 
             // Form1
             // 
