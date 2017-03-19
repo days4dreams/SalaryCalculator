@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +17,15 @@ namespace SalaryCalculator
             InitializeComponent();
         }
 
-
+　
         public double sal { get; set; }
-        public double ta { get; set; }
+        public double taxableAmount { get; set; }
         public double monthly { get; set; }
         public double weekly { get; set; }
         public double daily { get; set; }
         public double ni { get; set; }
-        public double th { get; set; }
+        public double takeHome { get; set; }
+        public int threshold1 = 11000;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -61,51 +62,51 @@ namespace SalaryCalculator
   
         }
 
-
-
+　
+　
         public void buttonCalculate_Click(object sender, EventArgs e)
-        {
+            {
 
-            sal = Convert.ToDouble(textBoxAnnualSalary.Text);
+                sal = Convert.ToDouble(textBoxAnnualSalary.Text);
 
-                if (sal < 11000)
-                {
-                    ta = 9;
-                    ni = 8;
+                    if (sal < 11000)
+                    {
+                        taxableAmount = 0;
+                        ni = 0;
+                    }
+                    else if (sal > 11001 && sal < 32000)
+                    {
+                        taxableAmount = ((sal - 11000) * 0.2);
+                        ni = ((sal - 8000) * 0.12);
+                    }
+                    else if (sal > 320001 && sal < 150000)
+                    {
+                        taxableAmount = (((sal - 43000) * 0.4) + 6400);
+                        ni = ((sal - 8000) * 0.12);
                 }
-                else if (sal > 11001 && sal < 32000)
-                {
-                    ta = ((sal - 11000) * 0.2);
-                    ni = ((sal - 8000) * 0.12);
+                    else if (sal > 150000)
+                    {
+                        taxableAmount = (((sal - 150000) * 0.45) + 6400 + 47200);
+                        ni = ((sal - 8000) * 0.12);
                 }
-                else if (sal > 320001 && sal < 150000)
-                {
-                    ta = (((sal - 43000) * 0.4) + 6400);
-                    ni = ((sal - 8000) * 0.12);
-            }
-                else if (sal > 150000)
-                {
-                    ta = (((sal - 150000) * 0.45) + 6400 + 47200);
-                    ni = ((sal - 8000) * 0.12);
-            }
 
-                textBoxTax.Text = ("" + ta);
+                textBoxTax.Text = ("" + taxableAmount);
                 textBoxNI.Text = ("" + ni);
 
-
+　
                 monthly = (sal / 12);
-                textBoxMonthlyGross.Text = ("" + monthly);
+                textBoxMonthlyGross.Text = String.Format("{0:0.00}", monthly);
 
                 weekly = (sal / 52);
-                textBoxWeeklyGross.Text = ("" + weekly);
+                textBoxWeeklyGross.Text = String.Format("{0:0.00}", weekly);
 
                 daily = (sal / 365);
-                textBoxDailyGross.Text = ("" + daily);
+                textBoxDailyGross.Text = String.Format("{0:0.00}", daily);
 
-            textBoxYearlyGross.Text = (textBoxAnnualSalary.Text);
+                textBoxYearlyGross.Text = (textBoxAnnualSalary.Text);
 
-                 th = (sal - (ta + ni));
-                 textBoxTakeHome.Text = ("" + th);
+                takeHome = (sal - (taxableAmount + ni));
+                textBoxTakeHome.Text = takeHome.ToString();
         }
 
         public void textBoxTax_TextChanged(object sender, EventArgs e)
@@ -113,9 +114,8 @@ namespace SalaryCalculator
             sal = Convert.ToDouble(textBoxAnnualSalary.Text);
 
             band myband = new band();
-            textBoxTax.Text = ("" + ta);
+            textBoxTax.Text = ("" + taxableAmount);
         }
     }
 
 }
-
